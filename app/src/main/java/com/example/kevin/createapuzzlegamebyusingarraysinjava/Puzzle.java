@@ -21,7 +21,7 @@ public class Puzzle {
 
         for (int index = 0; index < companyAndDevices.length; index++){
 
-            companyAndDevices[index] = new CompanyAndDevice()
+            companyAndDevices[index] = new CompanyAndDevice(companies[index / 12], devices[index % 12]);
 
         }
 
