@@ -26,4 +26,27 @@ public class Puzzle {
         }
 
     }
+
+    public void letsShuffleTheDevices() {
+
+        currentDeviceModel = 0;
+
+        for (int firstDevice = 0; firstDevice < companyAndDevices.length; firstDevice++) {
+
+            int secondDevice = secureRandomNumbers.nextInt(NUMBER_OF_MODELS);
+            CompanyAndDevice tempCompanyDevice = companyAndDevices[firstDevice];
+            companyAndDevices[firstDevice] = companyAndDevices[secondDevice];
+            companyAndDevices[secondDevice] = tempCompanyDevice;
+        }
+
+    }
+
+    public CompanyAndDevice giveMeTheModels() {
+
+        if (currentDeviceModel < companyAndDevices.length) {
+            return  companyAndDevices[currentDeviceModel++];
+        } else {
+            return null;
+        }
+    }
 }
