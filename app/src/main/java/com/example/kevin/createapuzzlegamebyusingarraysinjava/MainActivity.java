@@ -15,19 +15,15 @@ public class MainActivity extends AppCompatActivity {
         EditText edtPuzzle = (EditText)findViewById(R.id.edtPuzzle);
         String oldEdtPuzzleValue;
 
-
         Puzzle myPuzzle = new Puzzle();
-        myPuzzle.letsShuffleTheDevices();
+        myPuzzle.letsShuffleTheDivices();
 
-        for(int i = 0; i < 60; i++) {
+        for (int i = 0; i < 60; i++) {
+
             oldEdtPuzzleValue = edtPuzzle.getText().toString();
 
             edtPuzzle.setText(oldEdtPuzzleValue + myPuzzle.giveMeTheModels());
         }
-
-
-
-
 
 
 
